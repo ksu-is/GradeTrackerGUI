@@ -1,1 +1,9 @@
+from urllib import request
+from tkinter import *
 
+import tkinter as tk
+
+root = tk.Tk()
+root.geometry("650x650")
+result_text = Tk.Text(root, height=3, width=16, font-("Arial", 24))
+root.mainloop()
