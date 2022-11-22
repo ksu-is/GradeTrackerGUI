@@ -4,4 +4,8 @@ from tkinter import *
 import tkinter as tk
 
 root = tk.Tk()
+
+root.geometry("650x650")
+result_text = tk.Text(root, height=3, width=16, font=("Arial", 24))
+
 root.mainloop()
