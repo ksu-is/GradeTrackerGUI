@@ -10,6 +10,9 @@ window.title("Grade Tracker")
 frame = tk.Frame(window)
 frame.pack()
 
+info_frame = tk.LabelFrame(frame, text="Grades")
+info_frame.grid(row=0, column=0)
+
 root.geometry("650x650")
 result_text = tk.Text(root, height=3, width=16, font=("Arial", 24))
 def click():
