@@ -10,4 +10,8 @@ result_text = tk.Text(root, height=3, width=16, font=("Arial", 24))
 e = Entry(root, width=40, bg="green")
 e.pack()
 
+def click():
+    hello = "Grade is " + e.get()
+    Labels= Label(root, text=hello)
+    Labels.pack()
 root.mainloop()
