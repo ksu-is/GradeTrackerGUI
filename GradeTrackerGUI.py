@@ -14,4 +14,7 @@ def click():
     hello = "Grade is " + e.get()
     Labels= Label(root, text=hello)
     Labels.pack()
+Buttons = Button(root, text="Enter the Grade to Python Module 1", command=click)
+Buttons.pack()
+
 root.mainloop()
