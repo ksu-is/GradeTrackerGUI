@@ -1,32 +1,22 @@
-from urllib import request
-from tkinter import *
-
 import tkinter as tk
 
-root = tk.Tk()
 window = tk.Tk()
 window.title("Grade Tracker")
 
 frame = tk.Frame(window)
 frame.pack()
 
-info_frame = tk.LabelFrame(frame, text="Grades")
-info_frame.grid(row=0, column=0)
+info_user = tk.LabelFrame(frame, text="Grades")
+info_user.grid(row=0, column=0)
 
-root.geometry("650x650")
-result_text = tk.Text(root, height=3, width=16, font=("Arial", 24))
-def click():
-    hello = "Grade is " + e.get()
-    Labels= Label(root, text=hello)
-    Labels.pack()
-e = Entry(root, width=40, bg="green")
+python_1_module_1 = tk.Label(info_user, text="Python 1 Module 1")
+python_1_module_1.grid(row=0, column=0)
+python_1_module_2=tk.Label(info_user, text="Python 1 Module 2" )
+python_1_module_2.grid(row=2, column=0)
 
-Buttons1 = Button(root, text="Enter the Grade to Python Absolute Beginner Module 1", command=click)
-Buttons2 = Button(root, text="Enter the Grade to Python Absolute Beginner Module 2", command=click)
-Buttons1.pack()
-e.pack()
-Buttons2.pack()
-e.pack()
+python_1_module_1 = tk.Entry(info_user)
+python_1_module_1.grid(row=1, column=0)
+python_1_module_2 = tk.Entry(info_user)
+python_1_module_2.grid(row=4, column=0)
 
-
-root.mainloop()
+window.mainloop()
