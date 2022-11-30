@@ -7,7 +7,7 @@ window.title("Grade Tracker")
 frame = tk.Frame(window)
 frame.pack()
 
-info_user = tk.LabelFrame(frame, text="Grades")
+info_user = tk.LabelFrame(frame, text="Python 1")
 info_user.grid(row=0, column=0, padx=20, pady=20)
 
 python_1_module_1 = tk.Label(info_user, text="Python 1 Module 1")
@@ -32,10 +32,8 @@ python_1_module_4.grid(row=7, column=0)
 python_1_module_5 = tk.Entry(info_user)
 python_1_module_5.grid(row=9, column=0)
 
-letter_grade = tk.Label(info_user, text="Letter Grade")
-letter_grade_box = ttk.Combobox(info_user, values=["A", "B", "C", "D", "F"])
-letter_grade.grid(row=0, column=2)
-letter_grade_box.grid(row=1, column=2)
-
-
+python_2 = tk.LabelFrame(frame)
+python_2.grid(row=1, column=0)
+python_2_title = tk.Label(python_2, text="Python 2")
+python_2_title.grid(row=0, column=0)
 window.mainloop()
