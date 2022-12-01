@@ -1,10 +1,11 @@
 import tkinter as tk
-from tkinter import ttk
 import os
+from tkinter import *
+from tkinter import font
 import openpyxl
 
 
-def data():
+def excel_data():
     P1M1 = python_1_module_1.get()
     P1M2 = python_1_module_2.get()
     P1M3 = python_1_module_3.get()
@@ -18,18 +19,24 @@ def data():
     print("P1M1 Grade:", P1M1, "P1M2 Grade:", P1M2, "P1M3 Grade:", P1M3, "P1M4 Grade:", P1M4, "P1M5 Grade:", P1M5)
     print("P2M1 Grade:", P2M1, "P2M2 Grade:", P2M2, "P2M3 Grade:", P2M3, "P2M4 Grade:", P2M4, "P2M5 Grade:", P2M5)
 
-    filepath = r"C:\Users\danie\Downloads\ThisTest.xlsx"
-    #Note: Make a new file in front of the .xlsx. This will utilize the below funtion and create and excel file with heading
-    
-    if not os.path.exists(filepath):
+    filepath_excel = r"C:\Users\danie\Downloads\ExcelPython.xlsx"
+    #Note: Make a new file in front of the .xlsx. This will utilize the below funtion ann create an excel file with heading. 
+    #Note: If file is already created, it will be updated
+
+    if not os.path.exists(filepath_excel):
         workbook = openpyxl.Workbook()
         sheet = workbook.active
         heading = ["P1M1", "P1M2", "P1M3", "P1M4", "P1M5", "P2M1", "P2M2", "P2M3", "P2M4", "P2M5"]
         sheet.append(heading)
-        workbook.save(filepath)
+        workbook.save(filepath_excel)
+    workbook = openpyxl.load_workbook(filepath_excel)
+    excel_sheet = workbook.active
+    excel_sheet.append([P1M1, P1M2, P1M3, P1M4, P1M5, P2M1, P2M2, P2M3, P2M4, P2M5])
+    workbook.save(filepath_excel)
 
 window = tk.Tk()
 window.title("Grade Tracker")
+window.geometry = ("1200x710")
 
 frame = tk.Frame(window)
 frame.pack()
@@ -79,9 +86,7 @@ python_2_module_4.grid(row=17,column=0)
 python_2_module_5 = tk.Entry(info_user)
 python_2_module_5.grid(row=19,column=0)
 
-button = tk.Button(frame, text= "Submit Grades", command= data)
-button.grid(row=3, column=0, sticky="news", padx=20, pady=10)
-
-
+button_press = tk.Button(frame, text= "Submit Grades", command= excel_data)
+button_press.grid(row=3, column=0, sticky="news", padx=15, pady=10)
 
 window.mainloop()
