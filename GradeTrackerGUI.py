@@ -18,10 +18,16 @@ def data():
     print("P1M1 Grade:", P1M1, "P1M2 Grade:", P1M2, "P1M3 Grade:", P1M3, "P1M4 Grade:", P1M4, "P1M5 Grade:", P1M5)
     print("P2M1 Grade:", P2M1, "P2M2 Grade:", P2M2, "P2M3 Grade:", P2M3, "P2M4 Grade:", P2M4, "P2M5 Grade:", P2M5)
 
+    filepath = r"C:\Users\danie\Downloads\ThisTest.xlsx"
+    #Note: Make a new file in front of the .xlsx. This will utilize the below funtion and create and excel file with heading
+    
     if not os.path.exists(filepath):
         workbook = openpyxl.Workbook()
         sheet = workbook.active
         heading = ["P1M1", "P1M2", "P1M3", "P1M4", "P1M5", "P2M1", "P2M2", "P2M3", "P2M4", "P2M5"]
+        sheet.append(heading)
+        workbook.save(filepath)
+
 window = tk.Tk()
 window.title("Grade Tracker")
 

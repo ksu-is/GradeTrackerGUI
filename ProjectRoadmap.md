@@ -7,6 +7,6 @@
 - [x] Create GUI window
 - [x] Format GUI window
 -[x] Find ways to take input in textbox and result a grade
-- [] Take user input for assignment grades in IS 3020 under a user
-- [] Find ways to place input into excel file
+- [x] Take user input for assignment grades in IS 3020 under a user
+- [x] Find ways to place input into excel file
 - [] Place user input into excel file
