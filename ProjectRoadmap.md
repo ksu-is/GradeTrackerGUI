@@ -7,6 +7,12 @@
 - [x] Create GUI window
 - [x] Format GUI window
 -[x] Find ways to take input in textbox and result a grade
-- [x] Take user input for assignment grades in IS 3020 under a user
-- [x] Find ways to place input into excel file
-- [] Place user input into excel file
+- [x] Take user input for Python 1 and Python 2 assignments in IS 3020
+-[x] Use python script to create excel file
+- [x] Find ways to place data input into excel file
+- [x] Review and make sure code is working properly 
+- [x] Add any comments to help users
+- [x] Create slide for Sprint 3
+- [] Record explanation of code
+- [] Review Sprint 3
+- [] Prepare for presentation
