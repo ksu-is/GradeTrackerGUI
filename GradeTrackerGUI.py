@@ -1,5 +1,8 @@
 import tkinter as tk
 from tkinter import ttk
+import os
+import openpyxl
+
 
 def data():
     P1M1 = python_1_module_1.get()
@@ -12,8 +15,13 @@ def data():
     P2M3 = python_2_module_3.get()
     P2M4 = python_2_module_4.get()
     P2M5 = python_2_module_5.get()
-    print("P1M1 Grade:", P1M1, "P1M2 Grade:", P2M2, "P1M3 Grade:", P1M3, "P1M4 Grade:", P1M4, "P1M5 Grade:", P1M5)
+    print("P1M1 Grade:", P1M1, "P1M2 Grade:", P1M2, "P1M3 Grade:", P1M3, "P1M4 Grade:", P1M4, "P1M5 Grade:", P1M5)
+    print("P2M1 Grade:", P2M1, "P2M2 Grade:", P2M2, "P2M3 Grade:", P2M3, "P2M4 Grade:", P2M4, "P2M5 Grade:", P2M5)
 
+    if not os.path.exists(filepath):
+        workbook = openpyxl.Workbook()
+        sheet = workbook.active
+        heading = ["P1M1", "P1M2", "P1M3", "P1M4", "P1M5", "P2M1", "P2M2", "P2M3", "P2M4", "P2M5"]
 window = tk.Tk()
 window.title("Grade Tracker")
 
