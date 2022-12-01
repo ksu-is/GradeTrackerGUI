@@ -1,6 +1,19 @@
 import tkinter as tk
 from tkinter import ttk
 
+def data():
+    P1M1 = python_1_module_1.get()
+    P1M2 = python_1_module_2.get()
+    P1M3 = python_1_module_3.get()
+    P1M4 = python_1_module_4.get()
+    P1M5 = python_1_module_5.get()
+    P2M1 = python_2_module_1.get()
+    P2M2 = python_2_module_2.get()
+    P2M3 = python_2_module_3.get()
+    P2M4 = python_2_module_4.get()
+    P2M5 = python_2_module_5.get()
+    print("P1M1 Grade:", P1M1, "P1M2 Grade:", P2M2, "P1M3 Grade:", P1M3, "P1M4 Grade:", P1M4, "P1M5 Grade:", P1M5)
+
 window = tk.Tk()
 window.title("Grade Tracker")
 
@@ -52,7 +65,8 @@ python_2_module_4.grid(row=17,column=0)
 python_2_module_5 = tk.Entry(info_user)
 python_2_module_5.grid(row=19,column=0)
 
-
+button = tk.Button(frame, text= "Submit Grades", command= data)
+button.grid(row=3, column=0, sticky="news", padx=20, pady=10)
 
 
 
