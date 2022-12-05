@@ -13,6 +13,6 @@
 - [x] Review and make sure code is working properly 
 - [x] Add any comments to help users
 - [x] Create slide for Sprint 3
-- [] Record explanation of code
-- [] Review Sprint 3
-- [] Prepare for presentation
+- [x] Record explanation of code
+- [x] Review Sprint 3
+- [x] Prepare for presentation
